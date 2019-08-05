@@ -39,4 +39,10 @@ function createIssue() {
 
 function getIssues() {
   //once an issue is submitted, fetch all open issues to see the issues you are creating
+  fetch(`${baseURL}/repos/${user_repo}/issues`,{
+    headers:{
+      Authorization: `token ${getToken()}`
+    }
+  }).then(response => response.json())
+  .then(json => console.log(json);)
 }
