@@ -45,5 +45,5 @@ function getIssues() {
       Authorization: `token ${getToken()}`
     }
   }).then(response => response.json())
-  .then(json => console.log(json);)
-}*/
+  .then(json => console.log(json);)*/
+}
