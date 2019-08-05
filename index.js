@@ -1,4 +1,4 @@
-const baseURL = 'https://api.github.com/';
+const baseURL = 'https://api.github.com';
 const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
 const user_repo = 'ammar-64/js-ajax-fetch-lab';
 const tokens = getToken();
@@ -9,7 +9,7 @@ function getToken() {
   return token;
 }
 function forkRepo() {
-  fetch(`https://api.github.com/repos/${repo}/forks`,{
+  fetch(`${baseURL}/repos/${repo}/forks`,{
     headers: {
     Authorization: `token ${tokens}`
   }
