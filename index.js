@@ -6,7 +6,7 @@ function getToken() {
   const token = ''
   //change to your token to run in browser, but set
   //back to '' before committing so all tests pass
-  return token;
+  return '';
 }
 function forkRepo() {
   fetch(`${baseURL}/repos/${repo}/forks`,{
