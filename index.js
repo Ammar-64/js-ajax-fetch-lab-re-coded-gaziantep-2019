@@ -23,6 +23,7 @@ function showResults(json) {
 
 function createIssue() {
   //use this function to create an issue based on the values input in index.html
+  const postData = {     title: document. const postData = {     title: document.getElementById('title').value,     body: document.getElementById('body').value   }   fetch(`${baseURL}/repos/${user_repo}/issues`, {     method: 'POST',     body: JSON.stringify(postData),     headers: {       Authorization: `token ${getToken()}`     }   }).then(response => response.json())     .then(json => getIssues());('title').value,     body: document.getElementById('body').value   }   fetch(`${baseURL}/repos/${user_repo}/issues`, {     method: 'POST',     body: JSON.stringify(postData),     headers: {       Authorization: `token ${getToken()}`     }   }).then(response => response.json())     .then(json => getIssues());
 }
 
 function getIssues() {
