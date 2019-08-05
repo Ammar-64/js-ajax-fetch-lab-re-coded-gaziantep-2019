@@ -3,12 +3,12 @@ function getToken() {
   //back to '' before committing so all tests pass
   return '6c65fa3591ae36aa9e8f1af7cf31b2e5a5e1b47a';
 }
-const token = token();
+const token = getToken();
 function forkRepo() {
   const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
   fetch('https://api.github.com/repos/learn-co-curriculum/js-ajax-fetch-lab/forks',{
     headers: {
-    Authorization: getToken();
+    Authorization: `token ${token}`;
   }
 })
   .then(res => res.json())
