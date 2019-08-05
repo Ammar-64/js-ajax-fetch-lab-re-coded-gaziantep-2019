@@ -30,7 +30,7 @@ function createIssue() {
     title: document.getElementById('title').value,
     body: document.getElementById('body').value   }
     fetch(`${baseURL}/repos/${user_repo}/issues`, {
-      method: 'POST',     
+      method: 'POST',
       body: JSON.stringify(postData),
       headers: {
         Authorization: `token ${token}`
